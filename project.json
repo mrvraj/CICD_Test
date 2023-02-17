@@ -1,5 +1,5 @@
 {
-  "name": "UiPath Jenkins CICD Demo",
+  "name": "CICD_Test",
   "description": "CICD Demo Process with Jenkins",
   "main": "Main.xaml",
   "dependencies": {
