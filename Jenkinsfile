@@ -37,11 +37,11 @@ pipeline {
 	            steps {
 	                echo "Building..with ${WORKSPACE}"
 	                UiPathPack (
-						outputPath: '${WORKSPACE}', 
-						outputType: 'Process', 
-						projectJsonPath: 'project.json', 
-						traceLevel: 'None', 
-						version: AutoVersion()
+	                      outputPath: "D:\\UiPath",
+	                      projectJsonPath: "project.json",
+	                      version: [$class: 'ManualVersionEntry', version: "${MAJOR}.${MINOR}.${env.BUILD_NUMBER}"],
+	                      useOrchestrator: false,
+						  traceLevel: 'None'
 	        )
 	            }
 	        }
